@@ -1,56 +1,69 @@
 body{
-    background-image: url(./assets/image/BackGroundPimath-01.png);
-    background-size: 100%;
     margin: 0;
 }
 Header{
     position: fixed;
     width: 100%; 
     top:0px;
-    height: 110px;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 255, 0.486);
+    height: 70px;
+    display: block;
+    justify-content: center;
+    background-color: #1F77BC;
     z-index: 1;
+    border-radius: 5px;
+    font-family: sans-serif;
 }
-Header div {
-    background-color:  white;
-    width: 100px;
-    height: 100px;
-    display: flex;    
-    border-radius: 50px;
-}
-
 Header nav {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin: 30px 20px;
+    margin: auto 1px;
 }
 Header nav a {
-    padding: 0 15px ;
+    margin: auto;
+    padding: 5px 25px;
     color: white;
     font-size: 20px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+Header nav a:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 195, 255);
+    border-radius: 15px;
 }
 
 .warpper{
 width: 80%;
 border-radius: 20px;
-background-color: rgba(10, 204, 204, 0.7);
+/*background-color: rgba(10, 204, 204, 0.7);*/
 display: block;
 margin: 20px auto;
 padding: 20px;
 align-items: center ;
 }
-
+#description{
+    display: grid;
+    grid-template-rows: repeat(2,50%);
+    grid-template-columns: repeat(2,50%);
+    width: 80%;
+    margin: 0 auto;
+}
+#description img{
+    height: 200px;
+    width: 200px;
+}
 .Logo{
+    width: 35px;
+    height: 100%;
     display: block;
     margin: 5px 80px;
+    overflow: hidden;
 }
 .Logo img {
-    width: 80px;
-    height: 80px;
-    margin: 10px 10px;
+    width: 100%;
+    height: 100%;
 }
 
 .Vide{
@@ -58,12 +71,12 @@ align-items: center ;
 }
 
 .Card {
-    margin: 20px 20px ;
+    margin: 20px auto;
     height: 300px;
     width: 180px;
     border-radius: 20px;
     overflow: hidden;
-    border: 5px solid red;  
+    border: 2px solid red;  
     position: relative; 
 }
 .Card img {
@@ -77,11 +90,12 @@ align-items: center ;
     width: 100%;
     height: 100%;
     top: 0;
-    right: -100%;
+    right: +100%;
     position: absolute;
     background-color: rgba(255, 0, 0, 0.514);
     backdrop-filter: blur(5px);
     transition: 1s;
+    border-radius: 5px;
 }
 .descCard h3 { 
     text-align: center;
@@ -95,6 +109,34 @@ align-items: center ;
 }
 
 .Equipe{
-    display: flex;
-    justify-items: left;
+    display: grid;
+    align-items: center;
+    grid-template-rows: repeat(2,50%);
+    grid-template-columns: repeat(4,25%);
+}
+@media  screen and (max-width:1200px) {
+    .Equipe{
+        grid-template-rows: repeat(4,33%);
+        grid-template-columns: repeat(3,33%);
+    }
+
+}
+
+@media  screen and (max-width:800px) {
+    .Equipe{
+        grid-template-rows: repeat(4,25%);
+        grid-template-columns: repeat(2,50%);
+    }
+
+}
+
+@media  screen and (max-width:500px) {
+    .Equipe{
+        grid-template-rows: repeat(8,12.5%);
+        grid-template-columns: repeat(1,100%);
+    }
+    .warpper{
+        margin: 0px;
+    }
+
 }
