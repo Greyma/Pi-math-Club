@@ -2,33 +2,41 @@ body{
     background-image: url(./assets/image/BackGroundPimath-01.png);
     background-size: 100%;
     margin: 0;
-    
 }
 Header{
     position: fixed;
     width: 100%; 
     top:0px;
-    height: 20px;
-}
-Header div {
+    height: 110px;
     display: flex;
     justify-content: space-between;
+    background-color: rgba(0, 0, 255, 0.486);
+    z-index: 1;
+}
+Header div {
+    background-color:  white;
+    width: 100px;
+    height: 100px;
+    display: flex;    
+    border-radius: 50px;
 }
 
-Header div ul {
+Header nav {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin: 20px 20px;
+    margin: 30px 20px;
 }
-li {
-    padding: 0 20px ;
+Header nav a {
+    padding: 0 15px ;
+    color: white;
+    font-size: 20px;
 }
 
 .warpper{
 width: 80%;
 border-radius: 20px;
-background-color: rgba(223, 250, 250, 0.7);
+background-color: rgba(10, 204, 204, 0.7);
 display: block;
 margin: 20px auto;
 padding: 20px;
@@ -37,13 +45,56 @@ align-items: center ;
 
 .Logo{
     display: block;
-    margin: 0 20px;
+    margin: 5px 80px;
 }
-.Logo h3 {
-    padding: 0 100px;
+.Logo img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 10px;
 }
 
 .Vide{
     margin: 150px;
-    
+}
+
+.Card {
+    margin: 20px 20px ;
+    height: 300px;
+    width: 180px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 5px solid red;  
+    position: relative; 
+}
+.Card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.descCard {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.514);
+    backdrop-filter: blur(5px);
+    transition: 1s;
+}
+.descCard h3 { 
+    text-align: center;
+}
+
+.descCard p { 
+    margin: 5px 5px;
+}
+.Card:hover  .descCard {
+    right: 0;
+}
+
+.Equipe{
+    display: flex;
+    justify-items: left;
 }
