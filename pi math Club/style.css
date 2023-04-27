@@ -57,10 +57,15 @@ align-items: center ;
 .Logo{
     width: 35px;
     height: 100%;
-    display: block;
-    margin: 5px 80px;
+    margin: 5px 10px;
     overflow: hidden;
+    transition: 0.3s;
 }
+.Logo:hover{
+    overflow: visible;
+    width: 37px;
+}
+
 .Logo img {
     width: 100%;
     height: 100%;
@@ -83,9 +88,50 @@ align-items: center ;
     width: 100%;
     height: 100%;
     object-fit: cover;
-
+}
+.CardRott {
+    margin: 20px auto;
+    height: 300px;
+    max-width: 180px;
+    border-radius: 20px;
+    border: 2px solid red;  
+    position: relative; 
+}
+.CardRott{
+text-align: center;
+transition: 0.5s;
+transform-style: preserve-3d;
+}
+.CardRott:hover{
+    transform: rotateY(180deg);
 }
 
+.front,
+.back{
+    width: 180px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    backface-visibility: hidden;
+}
+.front{
+    cursor: pointer;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.back{
+    transform: rotateY(180deg);
+    position: absolute;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+}
 .descCard {
     width: 100%;
     height: 100%;
@@ -107,6 +153,93 @@ align-items: center ;
 .Card:hover  .descCard {
     right: 0;
 }
+.CardActivite:hover  .descCard {
+    right: 0;
+}
+.CardActivite{
+    margin: 20px auto;
+    height: 180px;
+    width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid red;  
+    position: relative;
+}
+.CardActivite img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.EquipeA{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3,33%);
+}
+
+footer{
+    background: #111;
+    height: 150px;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
+}    
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 5px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+.socials li{
+    margin: 0 20px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 20px;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-bottom p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+ }
+ .footer-bottom p a{
+   color:#44bae8;
+   font-size: 16px;
+   text-decoration: none;
+ }
+ .footer-bottom span{
+     text-transform: uppercase;
+     opacity: .4;
+     font-weight: 200;
+ }
 
 .Equipe{
     display: grid;
@@ -114,12 +247,16 @@ align-items: center ;
     grid-template-rows: repeat(2,50%);
     grid-template-columns: repeat(4,25%);
 }
+
 @media  screen and (max-width:1200px) {
     .Equipe{
         grid-template-rows: repeat(4,33%);
         grid-template-columns: repeat(3,33%);
     }
-
+    .EquipeA{
+        grid-template-rows: repeat(2,50%);
+        grid-template-columns: repeat(2,50%);
+    }
 }
 
 @media  screen and (max-width:800px) {
@@ -127,7 +264,10 @@ align-items: center ;
         grid-template-rows: repeat(4,25%);
         grid-template-columns: repeat(2,50%);
     }
-
+    .EquipeA{
+        grid-template-rows: repeat(3,33%);
+        grid-template-columns: repeat(1,100%);
+    }
 }
 
 @media  screen and (max-width:500px) {
