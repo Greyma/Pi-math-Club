@@ -12,16 +12,41 @@
 
         <Header>
                 <nav>
-                    <a href="#description">Description</a>
-                    <a href="#membre">Membre</a>
-                <div class="Logo">
-                    <img src="assets/image/Asset 3.png">
-                </div>
-                    <a href="#activites" >Activites</a>
-                    <a href="#objectives">objectives</a>
+                    <div class="Desktop">
+                        <a href="#description">Description</a>
+                        <a href="#membre">Membre</a>
+                        <div class="Logo">
+                            <img src="assets/image/Asset 3.png">
+                        </div>
+                        <a href="#activites" >Activites</a>
+                        <a href="#objectives">objectives</a>
+                    </div>
+                    <div class="Phone">
+                        <div class="Logo">
+                            <img src="assets/image/Asset 3.png">
+                        </div>  
+                        <div class="LogoMenu">
+                            <div class="Logo2">
+                                <img src="assets/image/menu.png">
+                            </div>
+                        </div> 
+
+                       
+                    </div>
+                    <div class="MenuMenu">
+                        <div class="menu">
+                            <a href="#description">Description</a>
+                            <a href="#membre">Membre</a>
+                            <a href="#activites" >Activites</a>
+                            <a href="#objectives">objectives</a> 
+                        </div> 
+                    </div>
+                    
                 </nav> 
+                    
+                 
         </Header>
-  
+        <script src="Menu.js"></script>   
         <section class="Vide">
             <div></div>
         </section>
@@ -182,37 +207,8 @@
                         <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(6)"></span>
                     </div>
                     </div>
-                    
+                    <script src="slide.js"></script>
                   </div>
-                  
-                  <script>
-                  var slideIndex = 1;
-                  showDivs(slideIndex);
-                  
-                  function plusDivs(n) {
-                    showDivs(slideIndex += n);
-                  }
-                  
-                  function currentDiv(n) {
-                    showDivs(slideIndex = n);
-                  }
-                  
-                  function showDivs(n) {
-                    var i;
-                    var x = document.getElementsByClassName("mySlides");
-                    var dots = document.getElementsByClassName("demo");
-                    if (n > x.length) {slideIndex = 1}
-                    if (n < 1) {slideIndex = x.length}
-                    for (i = 0; i < x.length; i++) {
-                      x[i].style.display = "none";  
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                      dots[i].className = dots[i].className.replace(" w3-white", "");
-                    }
-                    x[slideIndex-1].style.display = "block";  
-                    dots[slideIndex-1].className += " w3-white";
-                  }
-                  </script>
                   
             </div>
         </section>
@@ -226,7 +222,12 @@
                         <li><a href="https://www.linkedin.com/company/pi-math-club/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
                      </ul>
                 <p>pimathclubumbb@gmail.com</p>
-                <p>copyright &copy;2023 by.<a href="https://resumily-3ba3c.web.app/">Groupe Resumily</a>  </p>
+                <div class="down">
+                    <p>
+                      Ce site a été réalisé par Résumily
+                    </p>
+                    <p>copyright &copy; Pi Math Club - All rights reserved</p>
+                  </div>
             </div>
         </footer>
 
