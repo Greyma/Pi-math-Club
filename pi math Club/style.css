@@ -1,6 +1,13 @@
 body{
     margin: 0;
 }
+#description,#objectives p{
+    font-size: 25px;
+}
+h2{
+    font-size: 40px;
+    color: blue;
+}
 Header{
     position: fixed;
     width: 100%; 
@@ -37,9 +44,8 @@ Header nav a:hover {
 .warpper{
 width: 80%;
 border-radius: 20px;
-/*background-color: rgba(10, 204, 204, 0.7);*/
 display: block;
-margin: 20px auto;
+margin: auto auto;
 padding: 20px;
 align-items: center ;
 }
@@ -48,11 +54,11 @@ align-items: center ;
     grid-template-rows: repeat(2,50%);
     grid-template-columns: repeat(2,50%);
     width: 80%;
-    margin: 0 auto;
+    margin: auto auto;
 }
 #description img{
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    margin: auto auto;
 }
 .Logo{
     width: 35px;
@@ -60,10 +66,6 @@ align-items: center ;
     margin: 5px 10px;
     overflow: hidden;
     transition: 0.3s;
-}
-.Logo:hover{
-    overflow: visible;
-    width: 37px;
 }
 
 .Logo img {
@@ -81,7 +83,6 @@ align-items: center ;
     width: 180px;
     border-radius: 20px;
     overflow: hidden;
-    border: 2px solid red;  
     position: relative; 
 }
 .Card img {
@@ -89,12 +90,17 @@ align-items: center ;
     height: 100%;
     object-fit: cover;
 }
-.CardRott {
+.wrapCard {
     margin: 20px auto;
+}
+.wrapCard p {
+    margin-top: 20px;
+    text-align: center;
+}
+.CardRott {
+    border-radius: 18px;
     height: 300px;
     max-width: 180px;
-    border-radius: 20px;
-    border: 2px solid red;  
     position: relative; 
 }
 .CardRott{
@@ -102,7 +108,7 @@ text-align: center;
 transition: 0.5s;
 transform-style: preserve-3d;
 }
-.CardRott:hover{
+.wrapCard:hover .CardRott{
     transform: rotateY(180deg);
 }
 
@@ -130,7 +136,7 @@ transform-style: preserve-3d;
     position: absolute;
     height: 300px;
     background-color: #fff;
-    border-radius: 20px;
+    border-radius:18px;
 }
 .descCard {
     width: 100%;
@@ -138,17 +144,19 @@ transform-style: preserve-3d;
     top: 0;
     right: +100%;
     position: absolute;
-    background-color: rgba(255, 0, 0, 0.514);
+    background-color: rgba(47, 0, 255, 0.514);
     backdrop-filter: blur(5px);
     transition: 1s;
     border-radius: 5px;
 }
 .descCard h3 { 
     text-align: center;
+    color:white;
 }
 
 .descCard p { 
     margin: 5px 5px;
+    color: white;
 }
 .Card:hover  .descCard {
     right: 0;
@@ -157,13 +165,13 @@ transform-style: preserve-3d;
     right: 0;
 }
 .CardActivite{
-    margin: 20px auto;
-    height: 180px;
-    width: 300px;
+    margin: 30px 30px;
+    height: 300px;
+    width: 500px;
     border-radius: 20px;
     overflow: hidden;
-    border: 2px solid red;  
     position: relative;
+    text-align: center;
 }
 .CardActivite img {
     width: 100%;
@@ -174,12 +182,13 @@ transform-style: preserve-3d;
 .EquipeA{
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(3,33%);
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows:repeat(2,50%) ;
 }
 
 footer{
     background: #111;
-    height: 150px;
+    height: 300px;
     width: 100vw;
     padding-top: 40px;
     color: #fff;
@@ -194,6 +203,7 @@ footer{
 .footer-content h3{
     font-size: 2.1rem;
     font-weight: 500;
+    margin: 40px 30px;
     text-transform: capitalize;
     line-height: 5px;
 }
@@ -248,14 +258,49 @@ footer{
     grid-template-columns: repeat(4,25%);
 }
 
-@media  screen and (max-width:1200px) {
+.mySlides {display:none; width: 100%;}
+.SlideContenaire img {
+    width: 100%; 
+    border-radius: 30px;
+    overflow: hidden;
+    height: 500px;
+    object-fit: cover;
+}
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+@media  screen and (max-width:1350px) {
+    .CardActivite{
+        height: 290px;
+        width: 480px;
+    }
+}
+
+@media  screen and (max-width:1300px) {
     .Equipe{
         grid-template-rows: repeat(4,33%);
         grid-template-columns: repeat(3,33%);
     }
     .EquipeA{
-        grid-template-rows: repeat(2,50%);
-        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(3,33%);
+        grid-template-columns: repeat(1,100%);
+    }
+    #description{
+        grid-template-rows: repeat(4,25%);
+        grid-template-columns: repeat(1,100%);
+        margin-bottom:150px ;
+    }
+    #description,#objectives p{
+        font-size: 20px;
+    }
+    #description img{
+        margin: 20px auto;
+    }
+    .CardActivite{
+        margin: 20px auto;
     }
 }
 
@@ -264,9 +309,12 @@ footer{
         grid-template-rows: repeat(4,25%);
         grid-template-columns: repeat(2,50%);
     }
-    .EquipeA{
-        grid-template-rows: repeat(3,33%);
-        grid-template-columns: repeat(1,100%);
+}
+
+@media  screen and (max-width:650px) {
+    .CardActivite{
+        height: 250px;
+        width: 400px; 
     }
 }
 
@@ -274,6 +322,12 @@ footer{
     .Equipe{
         grid-template-rows: repeat(8,12.5%);
         grid-template-columns: repeat(1,100%);
+    }
+    .CardRott{
+        margin: 10px;
+    }
+    .CardActivite{
+        margin: 20px 15px ;
     }
     .warpper{
         margin: 0px;
