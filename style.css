@@ -1,19 +1,24 @@
-body{
-    margin: 0;
+*{
+        margin: 0;
+        padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: inherit;
+font-weight: 0;
 }
 #description,#objectives p{
     font-size: 25px;
 }
 h2{
     font-size: 40px;
-    color: blue;
+    color: #5c99c8;
 }
 Header{
     position: fixed;
     width: 100%; 
     top:0px;
     height: 70px;
-    display: block;
+    display: flex;
     justify-content: center;
     background-color: #1F77BC;
     z-index: 1;
@@ -31,8 +36,9 @@ Header nav a {
     padding: 5px 25px;
     color: white;
     font-size: 20px;
-    transition: 0.5s;
+    transition: 1s;
     text-decoration: none;
+    border-radius: 15px;
 }
 .Phone{    
     display: none;
@@ -61,8 +67,7 @@ Header nav a {
 }
 Header nav a:hover {
     color: rgb(0, 0, 0);
-    background-color: rgb(0, 195, 255);
-    border-radius: 15px;
+    background-color: #85c6f7;
 }
 .menu.open{
     height: 300px ;
@@ -72,8 +77,12 @@ Header nav a:hover {
     display: flex;
     justify-content: right;
     align-items: top;  
-    height: 900px;
+    height: 0;
 }  
+
+.MenuMenu.open { 
+    height: 900px;
+} 
 .warpper{
 width: 80%;
 border-radius: 20px;
@@ -158,7 +167,6 @@ transform-style: preserve-3d;
 .wrapCard:hover .CardRott{
     transform: rotateY(180deg);
 }
-
 .front,
 .back{
     width: 180px;
@@ -191,7 +199,7 @@ transform-style: preserve-3d;
     top: 0;
     right: +100%;
     position: absolute;
-    background-color: rgba(47, 0, 255, 0.514);
+    background-color: rgba(189, 118, 1, 0.5);
     backdrop-filter: blur(5px);
     transition: 1s;
     border-radius: 5px;
@@ -234,8 +242,8 @@ transform-style: preserve-3d;
 }
 
 footer{
-    background: #111;
-    height: auto;
+    background:black;
+    height: 270px;
     width: 100vw;
     padding-top: 40px;
     color: #fff;
@@ -250,7 +258,7 @@ footer{
 .footer-content h3{
     font-size: 2.1rem;
     font-weight: 500;
-    margin: 40px 30px;
+    margin: 10px;
     text-transform: capitalize;
     line-height: 5px;
 }
@@ -260,7 +268,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 5px;
+    margin:15px 10px;
 }
 .socials li{
     margin: 0 20px;
@@ -278,39 +286,32 @@ footer{
     transition: color .4s ease;
 }
 
-footer ul{
-    padding-left: 0;
-}
 .socials a:hover i{
-    color: aqua;
+    color: #1F77BC;
 }
 
-.footer-bottom p{
-    float: left;
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
- }
+
+.ln{
+    height:2px;
+    width:22vw;
+    margin: 10px;
+    border: none;
+    background-color:fff;}
+
+
  .down {
-    height: auto;
+    height: 15px;
+
     padding-top: 15px;
   }
   .down p {
-    font-size: 1.5vw;
+    font-size: 13px;
+    padding-bottom: 10px;
   }
   .down h2 {
     font-size: 2.5vw;
   }
- .footer-bottom p a{
-   color:#44bae8;
-   font-size: 16px;
-   text-decoration: none;
- }
- .footer-bottom span{
-     text-transform: uppercase;
-     opacity: .4;
-     font-weight: 200;
- }
+
 
 .Equipe{
     display: grid;
@@ -372,7 +373,6 @@ footer ul{
         grid-template-rows: repeat(4,25%);
         grid-template-columns: repeat(2,50%);
     }
-
         .Phone {
             display: flex;
             justify-content: space-between;
@@ -395,14 +395,33 @@ footer ul{
         grid-template-rows: repeat(8,12.5%);
         grid-template-columns: repeat(1,100%);
     }
+    Header, #activites{
+        max-width: 420px;
+        width: 100%;
+    }
     .CardRott{
         margin: 10px;
     }
     .CardActivite{
         margin: 20px 15px ;
+        height: 200px;
+        width: 300px; 
+    }
+    #description img { 
+        max-width: 250px;
+        height: 250px;
     }
     .warpper{
         margin: 0px;
+        width: 100%;
     }
 
+}
+
+@media screen and (max-width:400px){
+    Header, #activites{
+        max-width: 390px;
+        width: 100%;
+    }
+    
 }
